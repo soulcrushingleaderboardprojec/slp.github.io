@@ -2,7 +2,7 @@ import os
 import requests
 
 def get_data(r):
-    url = f"https://sheets.googleapis.com/v4/spreadsheets/1_xs_YjbpIFl59T9FGhT-Y4aA5co_Bcm4R7OlLB1YkmY/values/{r}?key={os.getenv("GOOGLE_SHEETS_API_KEY")}"
+    url = f"https://sheets.googleapis.com/v4/spreadsheets/c71707c2f481d6259c0cd1305aa7185fff9ae7db/values/{r}?key={os.getenv("GOOGLE_SHEETS_API_KEY")}"
     
     response = requests.get(url).json()
     values = response.get("values", [])
