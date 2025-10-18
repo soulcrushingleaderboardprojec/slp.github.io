@@ -10,7 +10,7 @@ creds = service_account.Credentials.from_service_account_file("service.json", sc
 service = build('sheets', 'v4', credentials=creds)
 sheet = service.spreadsheets()
 
-SHEET_ID = "1_xs_YjbpIFl59T9FGhT-Y4aA5co_Bcm4R7OlLB1YkmY"
+SHEET_ID = "c71707c2f481d6259c0cd1305aa7185fff9ae7db"
 
 response = requests.get(f"https://sheets.googleapis.com/v4/spreadsheets/{SHEET_ID}/values/backup!A:A?key={os.getenv('GOOGLE_SHEETS_API_KEY')}")
 names = response.json().get("values", [])
